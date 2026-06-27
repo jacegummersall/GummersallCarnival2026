@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Information hub for the Gummersall Carnival 2026 family reunion."
+    />
+    <title>Gummersall Carnival 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Nunito:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-hero">
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a href="#schedule">Schedule</a>
+        <a href="#activities">Activities</a>
+        <a href="#info">Details</a>
+      </nav>
+
+      <div class="hero-content">
+        <p class="eyebrow">Family Reunion</p>
+        <h1>Gummersall Carnival 2026</h1>
+        <p class="hero-copy">
+          Step right up for a cheerful weekend of cousins, games, food, photos,
+          and memory-making.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#schedule">See Schedule</a>
+          <a class="button secondary" href="#info">Plan Your Trip</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="intro-band" aria-label="Quick reunion facts">
+        <div class="fact-grid" id="quickFacts"></div>
+      </section>
+
+      <section class="section-shell split-layout" id="schedule">
+        <div>
+          <p class="section-kicker">Showtime Schedule</p>
+          <h2>Weekend Schedule</h2>
+          <p>
+            Times and locations can change while plans are still being finalized.
+          </p>
+        </div>
+        <div class="timeline" id="scheduleList"></div>
+      </section>
+
+      <section class="section-shell" id="activities">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Carnival Highlights</p>
+            <h2>Events & Activities</h2>
+          </div>
+          <p>
+            High-level details for the big reunion events and activities, with
+            more specifics added as plans come together.
+          </p>
+        </div>
+        <div class="card-grid" id="activityCards"></div>
+      </section>
+
+      <section class="info-band" id="info">
+        <div class="section-shell info-layout">
+          <div>
+            <p class="section-kicker">Ticket Booth</p>
+            <h2>Need-To-Know Details</h2>
+            <p>
+              Quick reference for the reunion location and who to contact with
+              questions.
+            </p>
+          </div>
+          <div class="detail-list" id="detailList"></div>
+        </div>
+      </section>
+    </main>
+
+    <div class="modal-backdrop" id="eventModal" hidden>
+      <div
+        class="event-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="eventModalTitle"
+      >
+        <button class="modal-close" type="button" aria-label="Close event details">
+          ×
+        </button>
+        <p class="modal-kicker" id="eventModalDay"></p>
+        <h2 id="eventModalTitle"></h2>
+        <p class="modal-time" id="eventModalTime"></p>
+        <p class="modal-description" id="eventModalDescription"></p>
+        <div class="modal-actions" id="eventModalLinks"></div>
+      </div>
+    </div>
+
+    <footer>
+      <p>Made with love for the Gummersall family.</p>
+      <p class="footer-note">Last updated: <span id="lastUpdated"></span></p>
+    </footer>
+
+    <script src="reunion-data.js"></script>
+    <script src="site.js"></script>
+  </body>
+</html>
